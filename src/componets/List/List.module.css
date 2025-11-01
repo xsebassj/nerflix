@@ -1,9 +1,54 @@
 .list {
+  margin: 20px 0;
+  padding-left: 40px;
+  color: #fff;
+  position: relative;
+  margin: 0 auto;
+}
+
+.list-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.list-wrapper {
+  position: relative;
+}
+
+.list-container {
   display: flex;
-  gap: 30px;
-  padding: 90px;
-  overflow-x: auto;
-  margin: auto;
-  text-align: justify;
-  border: 1px solid black;
+  overflow-x: hidden;
+  gap: 10px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  margin: 0 auto;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(20, 20, 20, 0.6);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(229, 9, 20, 0.8);
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
 }

@@ -1,20 +1,41 @@
-import Card from "../card/Card";
-import styles from "./List.module.css";
-import { movies } from "../../data/movies";
+import "./List.module.css";
+import { useRef } from "react";
 
-function List() {
+export default function List({ title, items }) {
+  const listRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (listRef.current) {
+      const { scrollLeft, clientWidth } = listRef.current;
+      const scrollAmount =
+        direction === "left"
+          ? scrollLeft - clientWidth
+          : scrollLeft + clientWidth;
+      listRef.current.scrollTo({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className={styles.list}>
-      {movies.map((movie) => (
-        <Card
-          key={movie.id}
-          title={movie.title}
-          image={movie.image}
-          description={movie.description}
-        />
-      ))}
+    <div className="list">
+      <h2 className="list-title">{title}</h2>
+      <div className="list-wrapper">
+        <button className="scroll-btn left" onClick={() => scroll("left")}>
+          &#10094;
+        </button>
+        <div className="list-container" ref={listRef}>
+          {items.map((item) => (
+            <Card
+              key={item.id}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+            />
+          ))}
+        </div>
+        <button className="scroll-btn right" onClick={() => scroll("right")}>
+          &#10095;
+        </button>
+      </div>
     </div>
   );
 }
-
-export default List;

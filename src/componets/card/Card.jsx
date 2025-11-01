@@ -1,6 +1,7 @@
+import React from "react";
 import styles from "./Card.module.css";
 
-function Card({ title, image, description }) {
+const Card = ({ image, title, description }) => {
   return (
     <div className={styles.card}>
       <img src={image} alt={title} />
@@ -8,6 +9,6 @@ function Card({ title, image, description }) {
       <p>{description}</p>
     </div>
   );
-}
+};
 
 export default Card;
