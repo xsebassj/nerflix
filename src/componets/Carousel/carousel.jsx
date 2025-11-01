@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import styles from "./carousel.module.css";
 import { movies } from "../../data/movies";
-import Card from "../Card/Card";
+import Card from "../card/Card";
 
 const Carousel = () => {
   const carruselRef = useRef(null);
