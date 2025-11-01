@@ -1,5 +1,5 @@
 import Container from "../componets/Container/container";
-import List from "../componets/list/List";
+import List from "../componets/List/list";
 function Home() {
   return (
     <Container>
