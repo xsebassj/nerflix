@@ -1,4 +1,4 @@
-import Navbar from "./componets/navbar/Navbar.jsx";
+import Navbar from "./componets/Navbar/navbar.jsx";
 import Home from "./pages/home.jsx";
 
 function App() {
