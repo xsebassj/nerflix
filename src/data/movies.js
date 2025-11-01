@@ -2,9 +2,9 @@ import clubImage from "../assets/clubpelea.png";
 import sevenImage from "../assets/51Rb5JgPRoL.webp";
 import sieteImage from "../assets/seven.webp";
 import breakingImage from "../assets/L.webp";
-import thisImage from "../assets/this.jpg";
-import gameImage from "../assets/game.webp";
-import drImage from "../assets/dr.webp";
+import thisImage from "../assets/this.png";
+import gameImage from "../assets/game.png";
+import drImage from "../assets/dr.png";
 import eterImage from "../assets/eter.webp";
 
 export const movies = [
